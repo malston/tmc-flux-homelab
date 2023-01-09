@@ -1,6 +1,9 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
+  labels:
+    tmc.cloud.vmware.com/managed-helm-release-cluster-uid: 01GP74GBSX74BKQNXD0K6VS0Y7
+    tmc.cloud.vmware.com/managed-helm-release-name: wordpress
   name: wordpress
   namespace: default
 spec:
@@ -13,7 +16,7 @@ spec:
         kind: HelmRepository
         name: bitnami
         namespace: tanzu-helm-resources
-      interval: 1m
+  serviceAccountName: wordpress-sa
   values:
     replicaCount: 1
     wordpressUsername: admin
