@@ -10,5 +10,5 @@ spec:
   prune: true
   sourceRef:
     kind: GitRepository
-    name: tmc-fluxcd-homelab
+    name: tmc-flux-homelab
     namespace: tanzu-continuousdelivery-resources
