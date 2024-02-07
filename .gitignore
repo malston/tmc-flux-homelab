@@ -7,3 +7,4 @@
 dockerconfig.json
 secret.*
 known_hosts
+*-data-values-secret.yaml
